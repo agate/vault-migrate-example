@@ -1,0 +1,16 @@
+version: '3'
+services:
+  source:
+    image: vault:1.4.7
+    volumes:
+      - ./:/data
+    cap_add:
+      - IPC_LOCK
+    entrypoint: vault server -config=/data/config/source.json
+  target:
+    image: vault:1.4.7
+    volumes:
+      - ./:/data
+    cap_add:
+      - IPC_LOCK
+    entrypoint: vault server -config=/data/config/target.json
