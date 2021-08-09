@@ -97,5 +97,5 @@ docker-compose exec source sh -c "VAULT_ADDR='http://0.0.0.0:8200' VAULT_TOKEN=$
 
 ```shell
 docker-compose exec target sh -c "VAULT_ADDR='http://0.0.0.0:8200' VAULT_TOKEN=$(cat tmp/init.output | grep -i token | sed 's|.*: *||') vault list secret/"
-```
 # You should only see `demo` in the list
+```
