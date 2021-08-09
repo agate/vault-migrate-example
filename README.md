@@ -1,5 +1,10 @@
 # Vault Migrate Example
 
+## Preparation
+
+* Install Docker: https://docs.docker.com/get-docker/
+* Install Docker Compose: https://docs.docker.com/compose/install/
+
 ## Initialization
 
 ### Start source server
